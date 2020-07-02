@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-bool f(int t[], int n, int &v){
+bool func(int t[], int n, int &v){
   int *ptr;
   ptr=&v;
   bool b;
@@ -21,6 +21,6 @@ int main(){
   int arr[n];
   cout<<"Ingrese el vector de enteros: ";
   for(int i=0;i<n;i++)cin>>arr[i];
-  f(arr,n,v);
-    cout<<"El primer numero entre 1 y 10 encontrado es: "<<v<<endl;
+  func(arr,n,v);
+    cout<<"El primer numero entre 0 y 10 encontrado es: "<<v<<endl;
 }
