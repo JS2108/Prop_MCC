@@ -1,3 +1,11 @@
+//ejercicio 8
+/*Para que el programa sea correcto debemos
+declarar la función "fun". Puede declararse
+antes de la función Main y después definirse
+al terminar Main como en el caso 1.
+También puede ser declarada y definida en un
+solo bloque antes de la función Main, como
+se muestra en el caso 2*/
 //---------- 1 ----------
 #include <iostream>
 using namespace std;
@@ -18,7 +26,8 @@ int fun(int r){return 2*r;}
 #include <iostream>
 using namespace std;
 
-//Definir la función antes de la función Main
+//Definir y declararla función antes de la
+//función Main
 int fun(int r){return 2*r;}//<-----
 
 int main(){

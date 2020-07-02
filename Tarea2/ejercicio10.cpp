@@ -6,8 +6,8 @@ int main(){
   int n,*arr,*sq;
   cout<<"Ingrese el tamaño del vector: ";
   cin>>n;
-  arr=new int [n];
-  sq=new int [n];
+  arr=new int [n];//declara dinamicamente
+  sq=new int [n];//declara dinamicamente
   cout<<"Ingrese el vector: ";
   for(int i=0;i<n;i++)//Captura arr[]
     cin>>arr[i];
