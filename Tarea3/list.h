@@ -13,7 +13,7 @@ public:
   // Remove the first element of right partition. Return
   // true if successful, false if right partition is empty.
   // The element removed is returned in the parameter.
-  virtual bool remove(Elem&) = 0;
+  virtual bool remove(Elem&) = 0; 
   // Place fence at list start, making left partition empty
   virtual void setStart() = 0;
   // Place fence at list end, making right partition empty

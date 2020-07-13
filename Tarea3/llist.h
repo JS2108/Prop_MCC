@@ -55,7 +55,7 @@ public:
 
   int Length() const {return leftcnt+rightcnt; }//JJ added
 
-  bool setPos(int pos);
+  bool setPos(int pos); 
 
   bool getValue(Elem& it) const {
     if(rightLength() == 0) return false;

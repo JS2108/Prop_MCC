@@ -20,7 +20,7 @@ public:
   }
   ~AList() { delete [] listArray; } // Destructor
   void clear() {
-    delete [] listArray;
+    delete [] listArray; 
     listSize = fence = 0;
     listArray = new Elem[maxSize];
   }
