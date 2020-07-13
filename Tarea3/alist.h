@@ -3,7 +3,7 @@
 
 // First, get the declaration for the base list class
 #include "list.h"
-#define DefaultListSize 0
+#define DefaultListSize 2
 
 template <class Elem> // Array-based list implementation
 class AList : public List<Elem> {
@@ -20,7 +20,7 @@ public:
   }
   ~AList() { delete [] listArray; } // Destructor
   void clear() {
-    delete [] listArray; 
+    delete [] listArray;
     listSize = fence = 0;
     listArray = new Elem[maxSize];
   }
@@ -33,6 +33,7 @@ public:
   void next()     { if (fence < listSize) fence++; }
   int leftLength() const  { return fence; }
   int rightLength() const { return listSize - fence; }
+  int Length() const {return listSize; }//JJ added
   bool setPos(int pos) {
     if ((pos >= 0) && (pos <= listSize)) fence = pos;
     return (pos >= 0) && (pos <= listSize);
