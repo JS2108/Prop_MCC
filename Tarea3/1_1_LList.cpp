@@ -6,6 +6,7 @@ void acentos(LList<char> *L1);
 void simbolos(LList<char> *L1);
 bool pal(LList<char> *L1);
 
+
 int main(){
   string input;//variable para los datos de entrada
   LList<char> L, *ptr;//crea la lista L y su puntero
