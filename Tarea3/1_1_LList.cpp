@@ -1,4 +1,4 @@
-//Ejercicio 1.1 utilizando lista ligada
+//Ejercicio 1.1 con lista ligada
 #include <iostream>
 using namespace std;
 #include "llist.h"
@@ -9,7 +9,7 @@ bool pal(LList<char> *L1);
 
 
 int main(){
-  string input= new input;//variable para los datos de entrada
+  string input;//variable para los datos de entrada
   LList<char> L, *ptr;//crea la lista L y su puntero
   ptr=&L;//asigna el puntero
   cout<<"Ingrese un texto para comprobar si es palindromo: ";
