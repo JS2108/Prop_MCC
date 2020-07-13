@@ -9,7 +9,7 @@ bool pal(LList<char> *L1);
 
 
 int main(){
-  string input;//variable para los datos de entrada
+  string input= new input;//variable para los datos de entrada
   LList<char> L, *ptr;//crea la lista L y su puntero
   ptr=&L;//asigna el puntero
   cout<<"Ingrese un texto para comprobar si es palindromo: ";
