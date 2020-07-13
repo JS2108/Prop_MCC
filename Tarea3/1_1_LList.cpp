@@ -1,3 +1,4 @@
+//Ejercicio 1.1 utilizando lista ligada
 #include <iostream>
 using namespace std;
 #include "llist.h"
