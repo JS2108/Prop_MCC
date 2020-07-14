@@ -16,3 +16,4 @@ int main(){
   //operador ternario, si el retorno de la función
   //es verdadero entonces el texto es palindromo
 }
+ 
