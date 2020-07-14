@@ -4,7 +4,7 @@ void simbolos(AList<char> *L1);
 bool pal(AList<char> *L1);
 
 void acentos(AList<char> *L1){//función para quitar acentos de vocales
-  for(int i=0;i<L1->Length();i++){//recorre la lista
+  for(int i=0;i<L1->Length();i++){//recorre la Alista
     char t1,t2;//los caracteres ascii extendidos tienen dos chars negativos
     L1->setPos(i); L1->getValue(t1);//lee el valor del elemento i
     if(t1==-61){//para el caso de las vocales acentuadas, -61 es el primero
@@ -23,12 +23,12 @@ void acentos(AList<char> *L1){//función para quitar acentos de vocales
     }}}
 }
 
-void simbolos(AList<char> *L1){//función para quitar símbolos
+void simbolos(AList<char>  *L1){//función para quitar símbolos
   acentos(L1);//antes de quitar los símbolos, primero elimina los acentos
   char t1;//variable para evaluar caracteres
-  int len=L1->Length();//tamaño de la lista
+  int len=L1->Length();//tamaño de la Alista
   L1->setStart();//mueve fence al inicio
-  for(int i=0;i<len;i++){//recorre la lista
+  for(int i=0;i<len;i++){//recorre la Alista
     L1->getValue(t1);//lee el valor frente a fence
     if(!((t1>64 && t1<91) ||//las letras minusculas ascii estan entre 64 y 91
       (t1>96 && t1<123)))//las letras mayusculas estan entre 96 y 123
@@ -37,18 +37,18 @@ void simbolos(AList<char> *L1){//función para quitar símbolos
       L1->next();}//si cumple con la condición, pasa al siguiente elemento de L
 }
 
-bool pal(AList<char> *L1){//función para verificar si el texto es palindromo
+bool pal(AList<char>  *L1){//función para verificar si el texto es palindromo
   simbolos(L1);//llama a la función que elimina los símbolos
   bool v;//variable de retorno
   char t1,t2;//variables para comparar si el texto es palindromo
-  int len=L1->Length();//tamaño de la lista
-  for(int i=0;i<len;i++){//recorre la lista
-    L1->setPos(i);L1->getValue(t1);//lee el elemento i de la lista
-    L1->setPos(len-i-1);L1->getValue(t2);//lee el elemento ~i de la lista
+  int len=L1->Length();//tamaño de la Alista
+  for(int i=0;i<len;i++){//recorre la Alista
+    L1->setPos(i);L1->getValue(t1);//lee el elemento i de la Alista
+    L1->setPos(len-i-1);L1->getValue(t2);//lee el elemento ~i de la Alista
     if((t1<91 && t2>96 && t1==t2-32) ||//las minusculas y mayusculas en
        (t1>96 && t2<91 && t2==t1-32) ||//valores ascii tienen 32 elementos
        (t1==t2))//de diferencia, así sabemos si a=A, etc
-       v=true;//si para toda la lista i=~i entonces la lista es un palindromo
+       v=true;//si para toda la Alista i=~i entonces la Alista es un palindromo
     else{
       v=false;break;}//si al menos una elemento i != ~i entonces no es palindromo
   }
