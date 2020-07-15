@@ -12,7 +12,7 @@ int main(){
   L.append(5);
   L.reverse();
   L.print();
-}
+} 
 
 /*template <class Elem> void LList<Elem>::reverse(){
   Link<Elem>* current = head;

@@ -95,64 +95,19 @@ template <class Elem> bool LList<Elem>::remove(Elem& it) {
 }
 
 template <class Elem> void LList<Elem>::reverse(){//JJ---------
-    // Initialize current, previous and
-    // next pointers
   Link<Elem>* current = head;
   Link<Elem>* prev = NULL, *next = NULL;
 
     while (current != NULL) {
-        // Store next
         next = current->next;
 
-        // Reverse current node's pointer
         current->next = prev;
 
-        // Move pointers one position ahead.
         prev = current;
         current = next;
     }
     head = prev;
 }
-
-/* poderosisimo
-
-t4=n
-t2=12345
-
-while t2 != NULL
-  t1=t2-> | 2345
-  t3=t2   | 12345 (t3=head->next)
-  t3->=t4 | 1
-  t4=t3   | 1
-  t2=t1   | 2345
-  --------------
-  t1=t2-> | 345
-  t3=t2   | 2345
-  t3->=t4 | 21
-  t4=t3   | 21
-  t2=t1   | 345
-  --------------
-  t1=t2-> | 45
-  t3=t2   | 345
-  t3->=t4 | 321
-  t4=t3   | 321
-  t2=t1   | 45
-  --------------
-  t1=t2-> | 5
-  t3=t2   | 45
-  t3->=t4 | 4321
-  t4=t3   | 4321
-  t2=t1   | 5
-  --------------
-  t1=t2-> | N
-  t3=t2   | 5
-  t3->=t4 | 54321
-  t4=t3   | 54321
-  t2=t1   | N
-
-  */
-
-
 
 // Move fence one step left; no change if left is empty
 template <class Elem> void LList<Elem>::prev() {
