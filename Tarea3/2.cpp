@@ -20,18 +20,16 @@ int main(){
   L.print();
 
 }
-
-/*template <class Elem> void LList<Elem>::reverse(){
-  Link<Elem>* current = head;
-  Link<Elem>* prev = NULL, *next = NULL;
-
-    while (current != NULL) {
-        next = current->next;
-
-        current->next = prev;
-
-        prev = current;
-        current = next;
+/*
+template <class Elem> void LList<Elem>::reverse(){//JJ---------
+  Link<Elem>* act = head;
+  Link<Elem>* ant = NULL, *sig = NULL;
+    while (act!=NULL) {
+        sig = act->next;
+        act->next = ant;
+        ant = act;
+        act = sig;
     }
-    head = prev;
-}*/
+    head = ant;
+}
+*/
