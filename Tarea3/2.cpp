@@ -10,9 +10,16 @@ int main(){
   L.append(3);
   L.append(4);
   L.append(5);
+  L.append(6);
+  L.append(7);
+  L.setStart();
+  L.print();
   L.reverse();
   L.print();
-} 
+  L.setPos(0);
+  L.print();
+
+}
 
 /*template <class Elem> void LList<Elem>::reverse(){
   Link<Elem>* current = head;
