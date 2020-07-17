@@ -95,18 +95,15 @@ template <class Elem> bool LList<Elem>::remove(Elem& it) {
 }
 
 template <class Elem> void LList<Elem>::reverse(){//JJ---------
-  Link<Elem>* current = head;
-  Link<Elem>* prev = NULL, *next = NULL;
-
-    while (current != NULL) {
-        next = current->next;
-
-        current->next = prev;
-
-        prev = current;
-        current = next;
+  Link<Elem>* act = head;
+  Link<Elem>* ant = NULL, *sig = NULL;
+    while (act!=NULL) {
+        sig = act->next;
+        act->next = ant;
+        ant = act;
+        act = sig;
     }
-    head = prev;
+    head = ant;
 }
 
 // Move fence one step left; no change if left is empty
@@ -132,12 +129,12 @@ template <class Elem> void LList<Elem>::print() const {
   Link<Elem>* temp = head;
   cout << "< ";
   while (temp != fence) {
-    cout << temp->next->element << " ";
+    cout << temp->element << " ";
     temp = temp->next;
   }
   cout << "| ";
   while (temp->next != NULL) {
-    cout << temp->next->element << " ";
+    cout << temp->element << " ";
     temp = temp->next;
   }
   cout << ">\n";
