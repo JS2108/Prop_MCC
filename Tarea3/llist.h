@@ -125,7 +125,7 @@ template <class Elem> bool LList<Elem>::setPos(int pos) {
   return true;
 }
 
-template <class Elem> void LList<Elem>::print() const {
+/*template <class Elem> void LList<Elem>::print() const {
   Link<Elem>* temp = head;
   cout << "< ";
   while (temp != fence) {
@@ -135,6 +135,22 @@ template <class Elem> void LList<Elem>::print() const {
   cout << "| ";
   while (temp->next != NULL) {
     cout << temp->element << " ";
+    temp = temp->next;
+  }
+  cout << ">\n";
+}*/
+
+//OG-------------
+template <class Elem> void LList<Elem>::print() const {
+  Link<Elem>* temp = head;
+  cout << "< ";
+  while (temp != fence) {
+    cout << temp->next->element << " ";
+    temp = temp->next;
+  }
+  cout << "| ";
+  while (temp->next != NULL) {
+    cout << temp->next->element << " ";
     temp = temp->next;
   }
   cout << ">\n";
