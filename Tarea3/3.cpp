@@ -9,7 +9,7 @@ void rotacion_bits(int registro, int d,int lado){//registro, d=no. rotaciones y 
   LQueue<bool> Q(reg_size);//lista ligada circular (cola cerrada)
   for(int i=0;i<=reg_size-1;i++){//llena la cola con los bits de registro
   if(registro>=(unsigned int)pow(2,reg_size-1-i)){
-    Q.enqueue(true);
+    Q.enqueue(true); 
     registro-=pow(2,reg_size-1-i);}
   else
     Q.enqueue(false);}
