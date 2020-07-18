@@ -13,6 +13,7 @@ void rotacion_bits(int registro, int d,int lado){//registro, d=no. rotaciones y 
     registro-=pow(2,reg_size-1-i);}
   else
     Q.enqueue(false);}
+  Q.print();
   for(int i=0;i<d;i++){//número de veces que se rota
     if(lado==1) Q.right_roll();//si lado==1 rota a la derecha
     else{
@@ -25,3 +26,17 @@ int main(){
   rotacion_bits(a,10,1);//rota "a" 10 veces a la derecha
   rotacion_bits(a,10,0);//rota "a" 10 veces a la izquerda
 }
+
+/*
+void left_roll(){
+  rear=front;                         //rear ahora es front (el primero ahora es ultimo)
+  front=front->next;                  //front ahora es el segundo
+}
+void right_roll(){                    //rotacion derecha
+  Link<Elem>* temp=front->next;       //apuntador temporal
+  while(temp->next!=rear){            //lleva el puntero al penultimo elemento
+    temp=temp->next;}                 //apunta al penultimo elemento
+  front=rear;                         //rear ahora es el primer elemento
+  rear=temp;                          //front ahora es el penúltimo elemento
+}
+*/
