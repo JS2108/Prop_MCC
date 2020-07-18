@@ -17,7 +17,7 @@ void rotacion_bits(int registro, int d,int lado){//registro, d=no. rotaciones y 
   for(int i=0;i<d;i++){//número de veces que se rota
     if(lado==1) Q.right_roll();//si lado==1 rota a la derecha
     else{
-      if(lado==0) Q.left_roll();}Q.print();}//si lado==0 rota a la izquierda
+      if(lado==0) Q.left_roll();}}//si lado==0 rota a la izquierda
   Q.print();
 }
 
