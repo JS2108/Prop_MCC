@@ -10,7 +10,7 @@ void rotacion_bits(int registro, int d,int lado){
   for(int i=0;i<=reg_size-1;i++){//llena la cola con los bits de registro
   if(registro>=(unsigned int)pow(2,reg_size-1-i)){
     Q.enqueue(true);
-    registro-=pow(2,reg_size-1-i);}
+    registro-=(unsigned int)pow(2,reg_size-1-i);}
   else
     Q.enqueue(false);}
   Q.print();
@@ -22,21 +22,22 @@ void rotacion_bits(int registro, int d,int lado){
 }
 
 int main(){
-  int a=0x1;
-  rotacion_bits(a,10,1);//rota "a" 10 veces a la derecha
-  rotacion_bits(a,10,0);//rota "a" 10 veces a la izquerda
+  int a=0x88A87888;
+  rotacion_bits(a,5,1);//rota "a" 5 veces a la derecha
+  cout<<endl;
+  rotacion_bits(a,5,0);//rota "a" 5 veces a la izquerda
 }
 
 /*
-void left_roll(){                     //rotacion izquierda
-  rear=front;                         //rear ahora es front (el primero ahora es ultimo)
+void left_roll(){
+  rear=front;                         //rear=front (el ultimo pasa a ser el primero)
   front=front->next;                  //front ahora es el segundo
 }
 void right_roll(){                    //rotacion derecha
   Link<Elem>* temp=front->next;       //apuntador temporal
   while(temp->next!=rear){            //lleva el puntero al penultimo elemento
-    temp=temp->next;}                 //apunta al penultimo elemento
-  front=rear;                         //rear ahora es el primer elemento
-  rear=temp;                          //front ahora es el penúltimo elemento
+    temp=temp->next;}
+  front=rear;                         //el primero pasa a ser el ultimo
+  rear=temp;                          //el ultimo pasa a ser el penultimo
 }
 */
