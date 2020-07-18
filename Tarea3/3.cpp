@@ -26,7 +26,7 @@ int main(){
   rotacion_bits(a,5,1);//rota "a" 5 veces a la derecha
   cout<<endl;
   rotacion_bits(a,5,0);//rota "a" 5 veces a la izquerda
-}
+} 
 
 /*
 void left_roll(){
