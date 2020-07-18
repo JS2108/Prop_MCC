@@ -4,12 +4,12 @@ using namespace std;
 #include "lqueue.h"
 #include <math.h>
 
-void rotacion_bits(int registro, int d,int lado){//registro, d=no. rotaciones y lado
+void rotacion_bits(int registro, int d,int lado){
   int reg_size=sizeof(d)*8;//tamaño del registro
   LQueue<bool> Q(reg_size);//lista ligada circular (cola cerrada)
   for(int i=0;i<=reg_size-1;i++){//llena la cola con los bits de registro
   if(registro>=(unsigned int)pow(2,reg_size-1-i)){
-    Q.enqueue(true); 
+    Q.enqueue(true);
     registro-=pow(2,reg_size-1-i);}
   else
     Q.enqueue(false);}
@@ -28,7 +28,7 @@ int main(){
 }
 
 /*
-void left_roll(){
+void left_roll(){                     //rotacion izquierda
   rear=front;                         //rear ahora es front (el primero ahora es ultimo)
   front=front->next;                  //front ahora es el segundo
 }
