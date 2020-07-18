@@ -82,7 +82,7 @@ void print(){//imprimir
   cout<<endl;
 }
 
-void left_roll(){
+void left_roll(){                     //rotacion izquierda
   rear=front;                         //rear=front (el ultimo pasa a ser el primero)
   front=front->next;                  //front ahora es el segundo
 }
