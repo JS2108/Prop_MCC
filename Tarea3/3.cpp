@@ -23,7 +23,7 @@ void bits_to_int(LQueue<bool> &Q,int &registro, int reg_size){
   registro=int(t_reg);
 }
 
-void rotacion_bits(int &registro, int d,int lado){
+void rotacion_bits(int &registro, int d,bool lado){
   cout<<"Registro decimal inicial: "<<registro<<endl;
   int reg_size=sizeof(d)*8;
   LQueue<bool> Q(reg_size);
